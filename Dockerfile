@@ -24,8 +24,6 @@ COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certifica
 
 COPY --from=build /opt/aws/amazon-cloudwatch-agent /opt/aws/amazon-cloudwatch-agent
 
-COPY /aws_con/config /root/.aws/config
-
 COPY statsd.json /opt/aws/amazon-cloudwatch-agent/bin/default_linux_config.json
 COPY statsd.json /opt/aws/amazon-cloudwatch-agent/etc/statsd.json
 
