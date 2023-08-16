@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  k6:
+    build: .
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION="eu-west-1"
+    ports:
+      - "6565:6565"

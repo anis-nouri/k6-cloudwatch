@@ -1,0 +1,17 @@
+{
+    "agent": {
+        "region": "us-west-2",
+        "endpoint": "monitoring.us-west-2.amazonaws.com"
+        },
+
+    "metrics": {
+        "namespace": "k6",
+        "metrics_collected": {
+            "statsd": {
+                "service_address": ":8125",
+                "metrics_collection_interval": 5,
+                "metrics_aggregation_interval": 0
+            }
+        }
+    }
+}
